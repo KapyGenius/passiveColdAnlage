@@ -1,0 +1,19 @@
+* C:\Users\DonaldKapyouo\OneDrive - MEC Management Consulting GmbH\Dokumente\alt pc\desktop\testbench\project mit professoren\Arndt\flowsensor.sxsch
+*#SIMETRIX
+X1 VR1_Wiper R5_N vcc 0 Q1_B LM2902/NS pinnames: inp inn vsp vsn out
+V1 vcc 0 12
+R1 vcc R1_N 12k
+R2 R1_N R2_N 1.2k
+R3 VR1_Min R3_N 140
+R5 Q1_E R5_N 52
+RH R5_N 0 45
+Rs R3_N 0 1.2k
+Q1 vcc Q1_B Q1_E 0 MPSA05
+.GRAPH Q1_E axisType="auto" persistence=-1 curveLabel="Output" xLog="auto" yLog="auto"  nowarn=true GUID="9fdfa5f3-2114-4bfa-bbcc-26480d56d395"  PROBEREF=Probe1  
+X$VR1 R2_N VR1_Wiper VR1_Min  VR1$TP_POT pinnames: Max Wiper Min
+.subckt VR1$TP_POT 1 2 3
+R1 1 2 250
+R2 2 3 250
+.ENDS
+.tran 1
+
